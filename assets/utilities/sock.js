@@ -3,11 +3,19 @@ import { NativeModules } from "react-native";
 
 
 
-const url = WebSocket('ws://token-network.herokuapp.com/ws');
+	var ws = new WebSocket("ws://token-network.herokuapp.com/ws");
 
-url.onmessage = function(event) {
-	var message = null
-};
+// 	ws.onopen = function (event){
+// 		ws.send("hello from client");
+// 	};
+
+	ws.onmessage = function (event){
+		var data = JSON.parse(event.data);
+		document.getElementById("chain").textContent = data;
+		console.log(event.data);
+		console.log(data);
+		return data
+	};
 
 
-export { url as CHAINDATA};
+export { ws as CHAINDATA };

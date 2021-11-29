@@ -1,7 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
-import CHAINDATA from './assets/utilities/sock'
+import CHAINDATA from './assets/utilities/sock.js'
+
+
+
 
 export default function App() {
   return (
@@ -31,6 +34,7 @@ export default function App() {
 
     <Text style={styles.chainimagetext}>Filler</Text>
     <Text style={styles.miningicontext}>Mining</Text>
+    <Text style={styles.chain} ElementId="chain"></Text>
 
 
 
@@ -104,5 +108,10 @@ const styles = StyleSheet.create({
     top: '66%',
     left: '31%',
     color: '#f0f0f0',
+  },
+  chain: {
+    position: 'absolute',
+    top: '10%',
+    color: '#fff',
   }
 });
