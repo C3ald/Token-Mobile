@@ -10,4 +10,4 @@ url.onmessage = function(event) {
 };
 
 
-export var url;
+export { url as CHAINDATA};

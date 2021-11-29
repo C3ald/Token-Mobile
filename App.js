@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import CHAINDATA from './assets/utilities/sock'
 
 export default function App() {
   return (
